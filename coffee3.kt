@@ -91,7 +91,6 @@ fun timeControl(){
     if (statusBtn == true){
         statusTimer = true
         timeCounter()
-      //  println("timeControl btn flag true")
     }
     else if (statusBtn == false){
         println("timeControl btn flag false")
@@ -99,7 +98,7 @@ fun timeControl(){
 
 }
 
-//The NTC value is being obtained from the user at regular intervals, and when this value reaches the desired maximum, the machine shuts down.
+//When NTC value reaches the desired maximum, the machine shuts down.
 fun ntcControl()
 {
 
