@@ -1,7 +1,3 @@
-//import java.util.Timer
-//import java.util.TimerTask
-
-
 private const val NTC_CHECK_INTERVAL = 3_000L // NTC is checked every second
 private const val TIMEOUT_DURATION = 12_000L // The coffee machine is turned off in 2 minutes. (2 minutes = 120000 milliseconds)
 private const val NTC_MAX = 1023//1023
@@ -21,12 +17,9 @@ var LasttotalTime: Long = TIMEOUT_DURATION+1
 
 fun main(){
 
-    //timerThread()
-
     while (true){
         if(statusSystem == false) {
             buttonControl()
-            //ntcControl()
         }
         timeControl()
         ntcControl()
@@ -117,6 +110,7 @@ fun ntcControl()
     else{
         LasttotalTime = totalTime
         if(statusBtn == true) {
+            
             // println("enter a ntc value")
             // val ntcInput: String? = readLine()
             // var ntc = ntcInput?.toIntOrNull() ?: 0
@@ -136,18 +130,3 @@ fun ntcControl()
 
 }
 
-
-//fun timerThread()
-//{
-//    val task = object : TimerTask(){
-//        override fun run() {
-//            if(statusSystem == false) {
-//
-//            }
-//            else{
-//
-//            }
-//        }
-//    }
-//    Timer().scheduleAtFixedRate(/* task = */ task, /* delay = */ 0, /* period = */ NTC_CHECK_INTERVAL)
-//}
